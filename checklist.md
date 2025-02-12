@@ -24,6 +24,6 @@
 - [x] **Allow users to save favorite cities**:
     - [x] Store favorites in **local storage**.
     - [x] Allow quick access to weather data for favorite cities.
-- [ ] **Write unit tests** for:
-    - [ ] Components
-    - [ ] Services
+- [x] **Write unit tests** for:
+    - [x] Components
+    - [x] Services
