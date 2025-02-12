@@ -1,0 +1,34 @@
+<mat-card class="weather-card">
+  <mat-card-title>Weather App</mat-card-title>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Enter City</mat-label>
+    <input matInput #cityInput type="text" />
+  </mat-form-field>
+
+  <div class="actions">
+    <button mat-raised-button color="primary" (click)="addFavourite.emit(cityInput.value)">Add to Favorites</button>
+  </div>
+</mat-card>
+
+<mat-card class="favorite-cities">
+  <mat-card-title>Favorite Cities</mat-card-title>
+
+  @if (favouriteCities() && favouriteCities().length > 0) {
+    <mat-list>
+      @for (city of favouriteCities(); track city) {
+        <mat-list-item>
+          <div class="city-info">
+            <div class="city-details">{{ city }} - {{ favouriteWeather()[city]?.main?.temp }}°C</div>
+            <button mat-icon-button color="warn" (click)="removeFavourite.emit(city)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        </mat-list-item>
+      }
+    </mat-list>
+  } @else {
+    <p class="no-fav">No favorite cities added.</p>
+
+  }
+</mat-card>

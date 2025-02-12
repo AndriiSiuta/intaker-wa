@@ -1,0 +1,27 @@
+<mat-form-field appearance="outline">
+  <input [formControl]="cityControl" matInput placeholder="Enter city name" />
+</mat-form-field>
+
+@if (error(); as error) {
+  <div class="error">
+    {{ error }}
+  </div>
+}
+
+<button mat-raised-button color="primary" (click)="searchWeather()">Search</button>
+
+<app-favourites-city
+  (addFavourite)="addFavorite($event)"
+  (removeFavourite)="removeFavorite($event)"
+  [favouriteWeather]="favoriteWeather()"
+  [favouriteCities]="favoriteCities()" />
+
+<mat-divider />
+
+@if (weather(); as cityWeather) {
+  <app-city-details [cityWeather]="cityWeather" />
+}
+
+@if (forecast(); as forecast) {
+  <app-forecast-history [forecast]="forecast" />
+}

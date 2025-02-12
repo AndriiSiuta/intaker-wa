@@ -1,0 +1,10 @@
+:host {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.city-info {
+  display: flex;
+  align-items: center;
+}
