@@ -3,7 +3,7 @@
 You don't need to be afraid of any API KEY, I have already added it in the code.
 He is coded in Injection Token, so you can change it in one place. 
 
-# [Checklist](../checklist.md) for the requirements.
+# [Checklist](checklist.md) for the requirements.
 
 ## Cache Service
 
