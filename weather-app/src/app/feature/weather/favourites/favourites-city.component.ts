@@ -6,6 +6,7 @@ import {MatButton, MatIconButton} from "@angular/material/button";
 import {MatList, MatListItem} from "@angular/material/list";
 import {MatIcon} from "@angular/material/icon";
 import {WeatherResponse} from "@app/feature/weather/weather.entities";
+import {JsonPipe} from "@angular/common";
 
 @Component({
   selector: 'app-favourites-city',
@@ -21,6 +22,7 @@ import {WeatherResponse} from "@app/feature/weather/weather.entities";
     MatListItem,
     MatIcon,
     MatLabel,
+    JsonPipe,
   ],
   templateUrl: './favourites-city.component.html',
   styleUrl: './favourites-city.component.scss',
